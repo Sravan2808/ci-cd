@@ -22,12 +22,12 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: ./docker/Dockerfile.user
+        file: ./docker/Dockerfile.user  
         push: true
         tags: dockersravan14052025/ci-cd:latest
 
     - name: Verify Pushed Image
-      run: dockersravan14052025/ci-cd:latest
+      run: docker pull dockersravan14052025/ci-cd:latest
 
 
       
